@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="B">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>MacroMax — Nutrition & Workout Tracker</title>
+  <meta name="description" content="Track food, macros, cardio and workouts. Your data stays on your device." />
+  <!-- iPhone / Add to Home Screen -->
+  <meta name="theme-color" content="#0b0e13" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="MacroMax" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <link rel="icon" href="icon.svg" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo"><span class="logo-m">M</span>acro<span class="logo-m">M</span>ax</div>
+      <div class="header-spacer"></div>
+      <div class="header-meta">
+        <button class="weight-pill" id="weight-pill" aria-label="Edit body weight">
+          <span class="wp-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5v11M3.5 9v5M17.5 6.5v11M20.5 9v5M6.5 12h11"/></svg>
+          </span>
+          <span class="wp-label">Body weight</span>
+          <span class="wp-value" id="weight-value">— kg</span>
+        </button>
+      </div>
+    </div>
+    <nav class="tabs" id="tabs">
+      <button data-tab="dashboard" class="active">Dashboard</button>
+      <button data-tab="nutrition">Nutrition</button>
+      <button data-tab="cardio">Cardio</button>
+      <button data-tab="workouts">Workouts</button>
+    </nav>
+  </header>
+
+  <main id="app"><!-- views render here --></main>
+
+  <div id="modal-root"></div>
+  <div class="flash" id="flash"></div>
+
+  <!-- Plain scripts (no modules) so the app works by simply opening the file -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <!-- Additive visual layer (button ripple); safe to remove -->
+  <script src="enhance.js"></script>
+</body>
+</html>
